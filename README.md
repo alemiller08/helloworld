@@ -5,6 +5,7 @@ Demo App
 **********************************************************************
                      BUILD AND RUN ON DOCKER
 **********************************************************************
+git clone -b master https://github.com/alemiller08/helloworld.git
 
 docker image build -t helloworld:1.0 .
 
@@ -61,9 +62,17 @@ $ s2i build --ref=develop https://github.com/alemiller08/helloworld centos/nginx
 ---> Copying nginx start-hook scripts...
 Build completed successfully
 
+
+$ docker run --rm -it -p 8080:8080 helloworld
+
 So now is running on localhost:8080
+
+![hello_world](./screenshot.png)
+
+For verify the images:
 
 $ docker images
 REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
 helloworld                 latest    4341dbedfbcd   7 seconds ago   324MB
 centos/nginx-112-centos7   latest    23b35619aecd   15 months ago   324MB
+
