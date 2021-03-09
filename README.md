@@ -47,13 +47,23 @@ $ docker container run --name helloworld -p 8080:80 helloworld:1.0
 /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
 /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
 
-Running on localhost:8080
+So now is running on localhost:8080
+
+![hello_world](./screenshot.png)
 
 **********************************************************************
                      BUILD AND RUN ON S2I
 **********************************************************************
 
-**********************************************************************
+$ s2i build --ref=develop https://github.com/alemiller08/helloworld centos/nginx-112-centos7 helloworld
 
-s2i build --ref=master https://github.com/alemiller08/helloworld centos/nginx-112-centos7 helloworld
+---> Installing application source
+---> Copying nginx start-hook scripts...
+Build completed successfully
 
+So now is running on localhost:8080
+
+$ docker images
+REPOSITORY                 TAG       IMAGE ID       CREATED         SIZE
+helloworld                 latest    4341dbedfbcd   7 seconds ago   324MB
+centos/nginx-112-centos7   latest    23b35619aecd   15 months ago   324MB
