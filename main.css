@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  position: center;
+  color: #555;
+  background-color: white;
+}
+
+.imagen{
+  border: 2px;
+  border-color: orange;
+  border-style: inset;
+}
