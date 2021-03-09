@@ -56,7 +56,7 @@ So now is running on localhost:8080
                      BUILD AND RUN ON S2I
 **********************************************************************
 
-$ s2i build --ref=develop https://github.com/alemiller08/helloworld centos/nginx-112-centos7 helloworld
+$ s2i build --ref=master https://github.com/alemiller08/helloworld centos/nginx-112-centos7 helloworld
 
 ---> Installing application source
 ---> Copying nginx start-hook scripts...
